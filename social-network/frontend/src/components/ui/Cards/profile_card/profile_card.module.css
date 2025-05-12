@@ -1,0 +1,202 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background: #fefefe;
+  border: 0.808824px solid #eeeeee;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5.66176px;
+  padding: 24px;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.container figcaption {
+  width: 100%;
+  padding: 50px;
+  position: relative;
+}
+
+.container .main {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.container .main .pfp {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 88%;
+  height: 120px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+}
+
+.stats .stat {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 25px;
+  gap: 6px;
+}
+
+.details .item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.details .item.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* Switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* Value display and edit styles */
+.value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.value svg {
+  cursor: pointer;
+}
+
+/* Edit container styles */
+.edit_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.edit_input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.edit_actions {
+  display: flex;
+  gap: 6px;
+}
+
+.edit_actions svg {
+  cursor: pointer;
+}
+
+.edit_actions svg:hover {
+  opacity: 0.8;
+}
+
+/* Action buttons styles */
+.actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 8px;
+  border: none;
+}
+
+.save_button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cancel_button {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save_button:hover,
+.cancel_button:hover {
+  opacity: 0.9;
+}
+
+.editable_pfp {
+  cursor: pointer;
+}
+
+.file_input {
+  display: none;
+}

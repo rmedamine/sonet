@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX idx_user_event_response ON group_event_responses(user_id, event_id);

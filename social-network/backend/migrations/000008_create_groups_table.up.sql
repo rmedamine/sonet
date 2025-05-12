@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS groups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    creatorId INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    description TEXT,
+    image TEXT,
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (creatorId) REFERENCES users(id) ON DELETE CASCADE
+);
